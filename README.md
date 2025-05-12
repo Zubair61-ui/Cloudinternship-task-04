@@ -24,7 +24,7 @@ In this project, I deployed the Internee.pk website on an AWS EC2 instance and c
   * Connected via SSH:
 
     ```bash
-    ssh -i your-key.pem ubuntu@<EC2-Public-IP>
+    ssh -i your-key.pem ubuntu@<13.203.230.193>
     ```
   * Installed and configured Apache:
 
