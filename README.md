@@ -1,4 +1,4 @@
-
+<div align="left">
  
 # Internee.pk Cloud Monitoring and Alerting
 
@@ -95,3 +95,4 @@ These metrics were added to a CloudWatch dashboard for real-time visualization.
   * Simulated high CPU load and confirmed receipt of the SNS email alert.
 
 ---  
+</div>
