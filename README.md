@@ -15,7 +15,7 @@ In this project, I deployed the Internee.pk website on an AWS EC2 instance and c
 
 * **Launched an EC2 Instance**
 
-  * Selected an Ubuntu Server AMI and a t3.micro instance.
+  * Selected an Ubuntu Server AMI and a t2.micro instance.
   * Configured security groups to allow HTTP (port 80) and SSH (port 22).
   * Attached an IAM role (`EC2CloudWatchAgentRole`) with the `CloudWatchAgentServerPolicy` policy.
 
