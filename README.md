@@ -1,7 +1,5 @@
 # Internee.pk Cloud Monitoring and Alerting
 
-## Summary
-
 In this project, I deployed the Internee.pk website on an AWS EC2 instance and configured comprehensive monitoring and alerting using Amazon CloudWatch and AWS SNS. The key achievements include:
 
 1. Hosted the Internee.pk web application on an Ubuntu EC2 instance.
@@ -17,7 +15,7 @@ In this project, I deployed the Internee.pk website on an AWS EC2 instance and c
 
   * Selected an Ubuntu Server AMI and a t3.micro instance.
   * Configured security groups to allow HTTP (port 80) and SSH (port 22).
-  * Attached an IAM role (`EC2CloudWatchAgentRole`) with the `CloudWatchAgentServerPolicy` and `AmazonSSMManagedInstanceCore` policies.
+  * Attached an IAM role (`EC2CloudWatchAgentRole`) with the `CloudWatchAgentServerPolicy` policy.
 
 * **Deployed the Web Application**
 
@@ -26,13 +24,13 @@ In this project, I deployed the Internee.pk website on an AWS EC2 instance and c
     ```bash
     ssh -i your-key.pem ubuntu@<EC2-Public-IP>
     ```
-  * Installed and configured NGINX:
+  * Installed and configured Apache:
 
     ```bash
     sudo apt update
-    sudo apt install nginx -y
+    sudo apt install apache2 -y
     ```
-  * Uploaded application files to `/var/www/html` and verified the site at `http://<EC2-Public-IP>`.
+  * Uploaded application files to `/var/www/html`.
 
 ---
 
@@ -89,7 +87,6 @@ These metrics were added to a CloudWatch dashboard for real-time visualization.
     * **Condition:** Average CPU utilization > 50%
     * **Period:** 5 minutes
   * Configured the alarm to publish to the `internee-alerts` SNS topic when in the `ALARM` state.
-  * Named the alarm `HighCPUAlarm-50`.
 
 * **Verified Notifications**
 
@@ -97,13 +94,5 @@ These metrics were added to a CloudWatch dashboard for real-time visualization.
 
 ---
 
-## Next Steps
 
-* Extend monitoring to include memory and disk usage via custom CloudWatch Agent metrics.
-* Automate this infrastructure and monitoring setup using AWS CloudFormation or Terraform.
-* Implement log monitoring and alerts for application errors using CloudWatch Logs and Metric Filters.
-
----
-
-*End of README*
 
