@@ -1,7 +1,5 @@
 # Internee.pk Cloud Monitoring and Alerting
-
 In this project, I deployed the Internee.pk website on an AWS EC2 instance and configured comprehensive monitoring and alerting using Amazon CloudWatch and AWS SNS. The key achievements include:
-
 **1.** Hosted the Internee.pk web application on an Ubuntu EC2 instance.
 **2.** Enabled detailed CloudWatch monitoring for the instance.
 **3.** Configured critical metrics: CPUUtilization, NetworkIn, NetworkOut, StatusCheckFailed, StatusCheckFailed\_Instance, and StatusCheckFailed\_System.
